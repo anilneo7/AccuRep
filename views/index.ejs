@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AccuRepo - Welcome</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Custom Styles -->
+  <style>
+    /* Center the container vertically and horizontally */
+    .centered-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #fff;
+    }
+
+    /* Card styling */
+    .card {
+      background-color: rgba(0, 0, 0, 0.75); /* semi-transparent background */
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Heading */
+    h2 {
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      color: #ffc107; /* Bootstrap warning color */
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    /* Form styling */
+    .form-group input {
+      background: rgba(255, 255, 255, 0.8); /* light background on input fields */
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Button styling */
+    .btn-custom {
+      width: 100%;
+      padding: 0.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .btn-login {
+      background-color: #28a745; /* Bootstrap success color */
+      border: none;
+    }
+
+    .btn-signup {
+      background-color: #17a2b8; /* Bootstrap info color */
+      border: none;
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #343a40; /* Dark background */
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: #ffc107; /* Match with heading color */
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="centered-container">
+    <div class="card">
+      <h2>Welcome to AccuRepo</h2>
+
+      <!-- Login Form -->
+      <form action="/login" method="POST" class="mb-4">
+        <div class="form-group">
+          <input type="text" name="username" placeholder="Username" required class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" placeholder="Password" required class="form-control">
+        </div>
+        <button type="submit" class="btn btn-custom btn-login">Login</button>
+      </form>
+
+      <!-- Divider -->
+      <div class="text-center text-light mb-3">OR</div>
+
+      <!-- Signup Form -->
+      <form action="/register" method="POST">
+        <div class="form-group">
+          <input type="text" name="username" placeholder="Username" required class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" placeholder="Password" required class="form-control">
+        </div>
+        <button type="submit" class="btn btn-custom btn-signup">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyright 2025 © AccuRepo. All Rights Reserved. 
+      <a href="https://www.linkedin.com/in/anil-mehra-3311a021b/" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

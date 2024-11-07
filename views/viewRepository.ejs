@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Your Repositories</h2>
+    <% if (repositories && repositories.length > 0) { %>
+      <ul>
+        <% repositories.forEach(repo => { %>
+          <li>
+            <a href="/repositories/<%= repo.name %>/view"><%= repo.name %></a> |
+            <a href="/repositories/<%= repo.name %>/add-code" class="btn btn-link">Add Code</a>
+          </li>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <p>No repositories found. Create a repository to start tracking commits.</p>
+    <% } %>
+
+    <form action="/repositories/create" method="POST">
+      <input type="text" name="repoName" placeholder="Repository Name" required>
+      <button type="submit">Create Repository</button>
+    </form>
+  </div>
+</body>
+</html>

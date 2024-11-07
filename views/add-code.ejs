@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Code</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Add Code to <%= repoName %></h2>
+    <form action="/repositories/<%= repoName %>/add-code" method="POST">
+      <div class="form-group">
+        <label for="commitMessage">Commit Message:</label>
+        <input type="text" name="commitMessage" id="commitMessage" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="code">Code Content:</label>
+        <textarea name="code" id="code" rows="5" class="form-control" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Code</button>
+    </form>
+  </div>
+</body>
+</html>

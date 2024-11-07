@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repository Detail</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Repository: <%= repository.name %></h2>
+    <h3>Commit History</h3>
+    <% if (repository.commits.length > 0) { %>
+      <ul>
+        <% repository.commits.forEach(commit => { %>
+          <li>
+            <strong>Commit ID:</strong> <%= commit.id %><br>
+            <strong>Message:</strong> <%= commit.message %><br>
+            <strong>Code:</strong><pre><%= commit.codeContent %></pre>
+            <hr>
+          </li>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <p>No commits yet. Add code to start tracking commits.</p>
+    <% } %>
+    <a href="/repositories" class="btn btn-secondary">Back to Repositories</a>
+  </div>
+</body>
+</html>
